@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>VueLearn</title>
+</head>
+<body>
+    <style>
+    #app{
+        margin:1em; 
+        width:30em;
+    }
+    input{
+        margin: 1em;
+    }
+    span{
+        margin:1em;
+    }
+    </style>
+    <div id="app">
+        <span><h2>Исходное положение:</h2></span>
+        <input class='form-control'
+        type='text'
+        v-model='input'
+        v-on:input='resultFunc'
+        >
+        <span id='result'><h3>Возможные варианты хода:</h3><br></span>
+        <span v-if="result">{{result}}</span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
